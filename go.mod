@@ -1,4 +1,4 @@
-module k8s_basic
+module rlist
 
 go 1.14
 
