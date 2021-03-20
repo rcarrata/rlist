@@ -40,9 +40,9 @@ func svclist(cl *kubernetes.Clientset, ns string) {
 	svcs, err := cl.CoreV1().Services(ns).List(context.TODO(), metav1.ListOptions{})
 
 	if ns != "" {
-		log.Printf("There are %d pods in the %v namespace\n", len(svcs.Items), ns)
+		log.Printf("There are %d services in the %v namespace\n", len(svcs.Items), ns)
 	} else {
-		log.Printf("There are %d pods in the cluster\n", len(svcs.Items))
+		log.Printf("There are %d services in the cluster\n", len(svcs.Items))
 	}
 
 	if err != nil {
